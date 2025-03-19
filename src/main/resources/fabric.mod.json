@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "capes",
+  "version": "${version}",
+
+  "name": "Capes",
+  "description": "use discord to update server status",
+  "authors": [],
+  "contact": {},
+
+  "license": "All-Rights-Reserved",
+  "icon": "assets/capes/icon.png",
+
+  "environment": "client",
+  "entrypoints": {
+    "client": ["me.mattia.capes.client.CapesClient"],
+    "main": ["me.mattia.capes.Capes"]
+  },
+
+  "mixins": [
+    "capes.mixins.json"
+    ,{
+      "config": "capes.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
